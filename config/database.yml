@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: shopper_development
+
+test:
+  <<: *default
+  database: shopper_test
+
+production:
+  <<: *default
+  database: shopper_production
+  username: shopper
+  password: <%= ENV['SHOPPER_DATABASE_PASSWORD'] %>
