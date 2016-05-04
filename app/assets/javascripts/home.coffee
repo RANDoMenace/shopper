@@ -1,2 +1,0 @@
-shopper = angular.module('shopper', [
-])
